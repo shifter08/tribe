@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--   ~ Copyright (c) 2018. Garry Dexter Bayucan -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.garry.tribe_weather"
+    android:versionCode="2"
+    android:versionName="1.1" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.garry.tribe_weather.activities.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.garry.tribe_weather.activities.DetailActivity"
+            android:label="@string/title_activity_detail"
+            android:parentActivityName="com.garry.tribe_weather.activities.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.garry.tribe_weather.activities.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName="com.garry.tribe_weather.activities.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>
